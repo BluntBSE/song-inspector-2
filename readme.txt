@@ -1,0 +1,2 @@
+This software runs on two containers. The dockerfile in '/client' runs on port 80 and serves the HTML webpage. The dockerfile in 'server' runs on port 8080 and offers API access.
+An external database is used to house user interactions.
