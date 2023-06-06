@@ -1,32 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SongMetaComponent } from './home/song-meta/song-meta.component';
-import { SongAttributesComponent } from './home/song-attributes/song-attributes.component';
-import { SongInputComponent } from './home/song-input/song-input.component';
-import { RecommendationCtaComponent } from './home/recommendation-cta/recommendation-cta.component';
-import { RecommendationOutputComponent } from './home/recommendation-output/recommendation-output.component';
-import { NavComponent } from './home/nav/nav.component';
-import { GenreJumperComponent } from './home/genre-jumper/genre-jumper.component';
-import { HomeWrapperComponent } from './home/home-wrapper/home-wrapper.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { DataComponent } from './data/data/data.component'; //How do I avoid this? I already have Home Module....
+//Alternative: do I really need to import them anyway?
+
+
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent, },
+  {path: 'data', component: DataComponent, },
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SongMetaComponent,
-    SongAttributesComponent,
-    SongInputComponent,
-    RecommendationCtaComponent,
-    RecommendationOutputComponent,
-    NavComponent,
-    GenreJumperComponent,
-    HomeWrapperComponent
+    DataComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+   // AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
