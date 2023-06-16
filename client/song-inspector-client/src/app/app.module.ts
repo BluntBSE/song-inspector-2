@@ -5,9 +5,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { DataComponent } from './data/data/data.component'; //How do I avoid this? I already have Home Module....
-//Alternative: do I really need to import them anyway?
-
+import { DataComponent } from './data/data/data.component'; 
+import { HomeModule } from './home/home.module';
+import { NavModule } from './nav/nav.module';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent, },
@@ -21,7 +21,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-   // AppRoutingModule,
+    NavModule,
+    HomeModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

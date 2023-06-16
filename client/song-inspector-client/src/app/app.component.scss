@@ -1,0 +1,8 @@
+@import '../styles';
+
+#app-wrapper{
+    display:grid;
+    grid-template-rows: minmax(50px, 100px), min-content
+
+    
+}

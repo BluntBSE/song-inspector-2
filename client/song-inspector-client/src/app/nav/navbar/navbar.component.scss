@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+.navbar{
+    height:50px;
+    border-color:white;
+    border-style:solid;
+    border-width: 2px;
+    display:flex;
+    background-color:black;
+    color:white;
+    justify-content: space-around;
+    align-items:center;
+}
