@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import './reset.scss';
+$background-color: #00252B;
+$light-text: white;
+$emphasized-text: #00FFD4;
+$unemphasized-text: #00BC9C;
+$gradient-start-1: #00705D;
+$gradient-start-2: #00252B;
+$navbar-background: black;
+
+body{
+    font-family: 'Bahnschrift', sans-serif;
+    background-color:lightgray;
+    min-height:100vh;
+}
+
+router-outlet{
+    display:none;
+}
+
