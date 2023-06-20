@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { QueryService } from '../../query.service';
 
 @Component({
   selector: 'app-song-chooser',
@@ -6,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./song-chooser.component.scss']
 })
 export class SongChooserComponent {
+
+  constructor(
+    private queryService: QueryService
+  ) { }
 
   artistToSearch: string = "Enter an artist";
   songNameToSearch: string = "Enter a song name";
@@ -16,6 +22,7 @@ export class SongChooserComponent {
     console.log("fetchSongData() called");
     console.log("artistToSearch: " + this.artistToSearch);
     console.log("songNameToSearch: " + this.songNameToSearch);
+    console.log("queryService: " + this.queryService.myvar._server);
   }
 
   updateArtist(){
@@ -27,7 +34,7 @@ export class SongChooserComponent {
     console.log("updateSongName() called");
   }
 
-  constructor() { }
+
 
   ngOnInit(): void {
   }

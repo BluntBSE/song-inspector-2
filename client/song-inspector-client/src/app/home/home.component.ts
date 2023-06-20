@@ -17,7 +17,7 @@ export class HomeComponent {
   constructor(
     private queryService: QueryService
   ){
-    
+    console.log("HomeComponent constructor called")
     console.log("queryService: " + queryService);
     console.log("queryService.mystr: " + queryService.mystr);
     
