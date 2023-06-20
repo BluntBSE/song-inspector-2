@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data/data.component'; 
 import { HomeModule } from './home/home.module';
 import { NavModule } from './nav/nav.module';
+import { APP_CONFIG, AppConfig } from './app.config';
+
+
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent, },
@@ -25,7 +28,7 @@ const appRoutes: Routes = [
     HomeModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [{ provide: APP_CONFIG, useValue: AppConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

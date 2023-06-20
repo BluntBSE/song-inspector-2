@@ -3,8 +3,8 @@
 </h1>
 <div class="selector-box">
     <p>Enter a song to explore audio features and get custom recommendations</p>
-    <input type="text" placeholder="Song Title">
+    <input type="text" placeholder="Song Title" [(ngModel)]="songNameToSearch">
     <!--Add NGModel to these inputs-->
-    <input type="text" placeholder="Artist">
-    <button>Get Song</button>
+    <input type="text" placeholder="Artist" [(ngModel)]="artistToSearch">
+    <button (click)="fetchSongData()">Get Song</button>
 </div>
