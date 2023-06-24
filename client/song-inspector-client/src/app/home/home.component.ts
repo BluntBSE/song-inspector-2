@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { QueryService } from '../query.service';
-import { query } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'home-root',
@@ -15,6 +16,7 @@ import { query } from '@angular/animations';
 })
 export class HomeComponent {
   constructor(
+
     private queryService: QueryService
   ){
     console.log("HomeComponent constructor called")

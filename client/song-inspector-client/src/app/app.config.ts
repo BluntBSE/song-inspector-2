@@ -9,5 +9,5 @@ export interface IAppConfig {
 }
 
 export const AppConfig: IAppConfig = {    
-    _server: "localhost:8081"    
+    _server: "http://localhost:8081"    
 };

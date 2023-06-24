@@ -9,6 +9,7 @@ import { DataComponent } from './data/data/data.component';
 import { HomeModule } from './home/home.module';
 import { NavModule } from './nav/nav.module';
 import { APP_CONFIG, AppConfig } from './app.config';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     BrowserModule,
     NavModule,
     HomeModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
   ],
   providers: [{ provide: APP_CONFIG, useValue: AppConfig }],
   bootstrap: [AppComponent]
