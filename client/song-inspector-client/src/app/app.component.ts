@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, Input } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 
 @Component({
@@ -9,5 +9,14 @@ import { ViewEncapsulation } from '@angular/core';
   
 })
 export class AppComponent {
+  constructor(){}
   title = 'song-inspector-client';
+  userToken = "";
+
+  @Input() userTokenEmitter = function (){
+    console.log("Emitter from parent called")
+  }
+
+  randomvar = "randomvar";
+
 }

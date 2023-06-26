@@ -10,18 +10,30 @@ import { HomeModule } from './home/home.module';
 import { NavModule } from './nav/nav.module';
 import { APP_CONFIG, AppConfig } from './app.config';
 import { HttpClientModule } from '@angular/common/http';
+import { QueryService } from './query.service';
+import { Injectable, Inject } from '@angular/core';
+import { AuthComponent } from './auth/auth.component';
+
+
+
+
 
 
 
 const appRoutes: Routes = [
+  {path: 'home', component: HomeComponent, },
   {path: '', component: HomeComponent, },
   {path: 'data', component: DataComponent, },
+  {path: 'authorizex', redirectTo: 'spotify.com'},
+  {path: 'auth', component: AuthComponent,}
+
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     DataComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,4 +45,15 @@ const appRoutes: Routes = [
   providers: [{ provide: APP_CONFIG, useValue: AppConfig }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(
+
+  ){
+ 
+
+
+    }
+  
+  
+ }
