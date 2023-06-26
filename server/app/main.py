@@ -12,6 +12,7 @@ origins = [
     '*',
 ]
 #Make the origins more secure later once you have a sense of where you're deploying.
+##Why are we getting cors errors after all this
 
 app.add_middleware(
     CORSMiddleware,
@@ -33,6 +34,10 @@ def read_root():
 @app.get("/gettoken")
 def get_token():
     return secrets.generateToken()
+
+@app.get("/get_authorization")
+def get_authorization(code: str = ""):
+    return secrets.generateAuthorization(code)
 
 
 
