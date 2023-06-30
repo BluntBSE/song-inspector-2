@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { QueryService } from './query.service';
 import { Injectable, Inject } from '@angular/core';
 import { AuthComponent } from './auth/auth.component';
-
+import {CookieService} from 'ngx-cookie-service';
 
 
 
@@ -41,8 +41,9 @@ const appRoutes: Routes = [
     HomeModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
+
   ],
-  providers: [{ provide: APP_CONFIG, useValue: AppConfig }],
+  providers: [{ provide: APP_CONFIG, useValue: AppConfig },],
   bootstrap: [AppComponent]
 })
 export class AppModule {
